@@ -12,7 +12,7 @@ var catalog = require('./routes/catalog');
 var app = express();
 
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://faizshahudin:mlabopan09871234@ds119059.mlab.com:19059/local_library';
+var mongoDB = process.env.MONGODB_URI || 'mongodb://faizshahudin:mlabopan09871234@ds119059.mlab.com:19059/local_library';
 
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
